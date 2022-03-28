@@ -1,0 +1,9 @@
+.header {
+    display: ;
+    flex-direction: column;
+    margin-top: 28px;
+    width: 100vw;
+    height: 56px;
+    align-items: flex-start;
+    border-bottom: solid 1px #545454;
+}
