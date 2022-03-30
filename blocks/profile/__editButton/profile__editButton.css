@@ -1,0 +1,10 @@
+.profile__editButton {
+    box-sizing: border-box;
+    background-color: black;
+    background-image: url("../../../images/Edit\ Button.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 18px;
+    height: 18px;
+    border: 0;
+}
