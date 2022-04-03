@@ -1,9 +1,15 @@
 .header {
-    display: flex;
-    flex-direction: column;
-    margin-top: 28px;
-    width: 100vw;
+    padding-top: 28px;
     height: 56px;
-    align-items: flex-start;
     border-bottom: solid 1px #545454;
+    transition: .3s;
 }
+
+
+@media screen and (min-width: 450px) {
+    .header {
+        margin: 0 auto;
+        padding-top: 45px;
+        text-align: start;
+        max-width: 880px;
+    }

@@ -1,10 +1,4 @@
 .page {
-    max-width: 1280px;
-    min-width: 320px;
-    display: flex;
-    align-content: center;
-    justify-content: center;
-    flex-direction: column;
     background-color: #000;
     font-family: "Inter", "Arial", "Helvetica", sans-serif;
     color: #fff;
@@ -12,3 +6,4 @@
     -moz-osx-font-smoothing: grayscale;
     overflow-x: hidden;
 }
+
