@@ -10,3 +10,7 @@
     margin: 36px auto;
     padding: 0;
 }
+
+.profile__addButton:hover {
+    opacity: 50%;
+}

@@ -1,0 +1,6 @@
+.gallary {
+  display: grid;
+  grid-template-columns: 282px;
+  grid-template-rows: repeat(6, 361px);
+  gap: 20px;
+}

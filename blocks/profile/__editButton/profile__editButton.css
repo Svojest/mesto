@@ -7,4 +7,9 @@
     width: 18px;
     height: 18px;
     border: 0;
+    
+}
+
+.profile__editButton:hover {
+    opacity: 50%;
 }
