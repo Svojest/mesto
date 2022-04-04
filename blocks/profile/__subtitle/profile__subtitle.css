@@ -4,4 +4,13 @@
   font-weight: 400;
   font-size: 14px;
   line-height: 17px;
+  padding-top: 14px;
+}
+
+@media screen and (min-width: 800px ) {
+  .profile__subtitle {
+    padding-top: 12px;
+    justify-self: start;
+    margin-left: 30px;
+  }
 }
