@@ -5,10 +5,19 @@
   grid-template-rows: repeat(6, 361px);
   gap: 20px;
   justify-content: center;
+  margin-top: 50px;
 }
 
-@media screen and (min-width: 450px) {
+@media screen and (min-width: 620px) {
   .gallary {
-    justify-content: start;
+    grid-template-columns: repeat(2, 282px);
+    grid-template-rows: repeat(3, 361px);
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .gallary {
+    grid-template-columns: repeat(3, 282px);
+    grid-template-rows: repeat(2, 361px);
   }
 }
