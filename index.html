@@ -28,7 +28,6 @@
           <p class="profile__subtitle">Исследователь океана</p>
         </div>
         <button class="profile__addButton" type="button"></button>
-
       </section>
 
       <section class="gallary">
@@ -36,7 +35,7 @@
           <img
             src="./images/kirill-pershin-1088404-unsplash.jpg"
             alt="Карачеевск"
-            class="gallary__image "
+            class="gallary__image"
           />
           <div class="gallary__info">
             <h2 class="gallary__title">Карачаевск</h2>
@@ -125,8 +124,32 @@
       </section>
     </main>
 
-      <footer class="footer">
-        <p class="footer__copyright">© 2022 Mesto Russia</p>
-      </footer>
+    <footer class="footer">
+      <p class="footer__copyright">© 2022 Mesto Russia</p>
+    </footer>
+
+    <div class="popup popup_edit-profile popup_opened">
+      <form class="popup__container">
+        <h2 class="popup__title">Редактировать профиль</h2>
+        <fieldset class="popup__input-container">
+          <input
+            type="text"
+            class="popup__heading popup__input"
+            id="title"
+            placeholder="Имя"
+            required
+          />
+          <input
+            type="text"
+            class="popup__description popup__input"
+            id="subtitle"
+            placeholder="О себе"
+            required
+          />
+          <button class="popup__button popup__button_save" type="submit">Сохранить</button>
+          <button class="popup__button popup__button_close" type="reset"></button>
+        </fieldset>
+      </form>
+    </div>
   </body>
 </html>
