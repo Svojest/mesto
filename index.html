@@ -24,7 +24,7 @@
         />
         <div class="profile__container">
           <h1 class="profile__title">Жак-Ив Кусто</h1>
-          <button class="profile__editButton" type="button"></button>
+          <button class="profile__editButton" type="button" name="edit-profile" id="edit-profile"></button>
           <p class="profile__subtitle">Исследователь океана</p>
         </div>
         <button class="profile__addButton" type="button"></button>
@@ -128,8 +128,8 @@
       <p class="footer__copyright">© 2022 Mesto Russia</p>
     </footer>
 
-    <div class="popup popup_edit-profile popup_opened">
-      <form class="popup__container">
+    <div class="popup popup_edit-profile">
+      <form class="popup__form popup__container">
         <h2 class="popup__title">Редактировать профиль</h2>
         <fieldset class="popup__input-container">
           <input
@@ -151,5 +151,7 @@
         </fieldset>
       </form>
     </div>
+    <script src="./scripts/popup.js"></script>
+    <script src="./scripts/form.js"></script>
   </body>
 </html>
