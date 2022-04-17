@@ -1,4 +1,4 @@
-const editProfileBtn = document.querySelector('.profile__editButton');
+const editProfileBtn = document.querySelector('.profile__btn-edit');
 const modalWindow = document.querySelector('.popup');
 const editCloseBtn = document.querySelector('.popup__button_close');
 

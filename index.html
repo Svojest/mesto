@@ -24,10 +24,15 @@
         />
         <div class="profile__container">
           <h1 class="profile__title">Жак-Ив Кусто</h1>
-          <button class="profile__editButton" type="button" name="edit-profile" id="edit-profile"></button>
+          <button
+            class="profile__btn-edit"
+            type="button"
+            name="edit-profile"
+            id="edit-profile"
+          ></button>
           <p class="profile__subtitle">Исследователь океана</p>
         </div>
-        <button class="profile__addButton" type="button"></button>
+        <button class="profile__btn-add" type="button"></button>
       </section>
 
       <section class="gallary">
@@ -36,6 +41,7 @@
             src="./images/kirill-pershin-1088404-unsplash.jpg"
             alt="Карачеевск"
             class="gallary__image"
+            type="button"
           />
           <div class="gallary__info">
             <h2 class="gallary__title">Карачаевск</h2>
@@ -51,6 +57,7 @@
             src="./images/kirill-pershin-1556355-unsplash.png"
             alt="Гора Эльбрус"
             class="gallary__image"
+            type="button"
           />
           <div class="gallary__info">
             <h2 class="gallary__title">Гора Эльбрус</h2>
@@ -66,6 +73,7 @@
             src="./images/kirill-pershin-1404681-unsplash.png"
             alt="Домбай"
             class="gallary__image"
+            type="button"
           />
           <div class="gallary__info">
             <h2 class="gallary__title">Домбай</h2>
@@ -81,6 +89,7 @@
             src="./images/kirill-pershin-1088404-unsplash.jpg"
             alt="Карачеевск"
             class="gallary__image"
+            type="button"
           />
           <div class="gallary__info">
             <h2 class="gallary__title">Гора Эльбрус</h2>
@@ -96,6 +105,7 @@
             src="./images/kirill-pershin-1088404-unsplash.jpg"
             alt="Карачеевск"
             class="gallary__image"
+            type="button"
           />
           <div class="gallary__info">
             <h2 class="gallary__title">Карачаевск</h2>
@@ -111,6 +121,7 @@
             src="./images/kirill-pershin-1556355-unsplash.png"
             alt="Карачеевск"
             class="gallary__image"
+            type="button"
           />
           <div class="gallary__info">
             <h2 class="gallary__title">Карачаевск</h2>
@@ -128,28 +139,37 @@
       <p class="footer__copyright">© 2022 Mesto Russia</p>
     </footer>
 
-    <div class="popup popup_edit-profile">
-      <form class="popup__form popup__container">
-        <h2 class="popup__title">Редактировать профиль</h2>
-        <fieldset class="popup__input-container">
-          <input
-            type="text"
-            class="popup__heading popup__input"
-            id="title"
-            placeholder="Имя"
-            required
-          />
-          <input
-            type="text"
-            class="popup__description popup__input"
-            id="subtitle"
-            placeholder="О себе"
-            required
-          />
-          <button class="popup__button popup__button_save" type="submit">Сохранить</button>
-          <button class="popup__button popup__button_close" type="reset"></button>
-        </fieldset>
-      </form>
+    <div class="popup">
+      <div class="popup__container">
+        <form class="popup__form" name="form-edit">
+          <h2 class="popup__title">Редактировать профиль</h2>
+          <fieldset class="popup__input-container">
+            <input
+              type="text"
+              class="popup__heading popup__input"
+              id="title"
+              placeholder="Имя"
+              required
+              name="form-name"
+            />
+            <input
+              type="text"
+              class="popup__description popup__input"
+              id="subtitle"
+              placeholder="О себе"
+              required
+              name="form-about"
+            />
+            <button class="popup__button popup__button_save" type="submit">
+              Сохранить
+            </button>
+            <button
+              class="popup__button popup__button_close"
+              type="reset"
+            ></button>
+          </fieldset>
+        </form>
+      </div>
     </div>
     <script src="./scripts/index.js"></script>
     <script src="./scripts/form.js"></script>
