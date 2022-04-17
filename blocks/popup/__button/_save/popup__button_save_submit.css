@@ -1,4 +1,4 @@
-.popup__button_save {
+.popup__button_save_submit {
   background-color: #000;
   color: #fff;
   border: 0;
@@ -10,14 +10,14 @@
   margin-top: 15px;
 }
 
-.popup__button_save:hover {
+.popup__button_save_submit:hover {
   cursor: pointer;
   opacity: 0.9;
   transition: 0.3s;
 }
 
 @media screen and (min-width: 620px) {
-  .popup__button_save {
+  .popup__button_save_submit {
     height: 50px;
     font-size: 18px;
     line-height: 22px;

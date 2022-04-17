@@ -1,4 +1,7 @@
 .popup__input {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
   border: 0;
   border-bottom: solid 1px #8383836e;
   outline: 0;
@@ -9,5 +12,4 @@
 
 .popup__input:focus {
   outline: 3px solid rgba(21, 150, 209, 0.76);
-
 }
