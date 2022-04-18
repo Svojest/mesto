@@ -2,6 +2,13 @@
   font-weight: 400;
   font-size: 14px;
   line-height: 17px;
-  opacity: 50%;
+  color: rgba(84, 84, 84, 1);
   margin: 48px auto 36px;
+}
+
+@media (min-width: 900px) {
+  .footer__copyright {
+    font-size: 18px;
+    line-height: 22px;
+  }
 }
