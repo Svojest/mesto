@@ -14,15 +14,8 @@
   opacity: 60%;
 }
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 900px) {
   .profile__btn-add {
     background-image: url("../../../images/Add\ Button\ desktop.svg");
     width: 150px;
-}
-
-@media screen and (min-width: 900px) {
-  .profile__addButton {
-    right: 0;
-    transition: .3s;
-  }
 }

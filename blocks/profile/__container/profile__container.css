@@ -1,17 +1,14 @@
 .profile__container {
-  margin-top: 26px;
   margin-bottom: 36px;
-  width: 100%;
-  background-color: aquamarine;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   box-sizing: border-box;
-  display: grid;
-  grid-template-columns: repeat(2, minmax(min-content, max-content));
-  grid-template-rows: 1fr;
-  text-align: center;
-  justify-content: center;
 }
 
-@media screen and (min-width: 450px) {
+@media (min-width: 900px) {
   .profile__container {
+    flex-direction: row;
+    margin: 0;
   }
 }

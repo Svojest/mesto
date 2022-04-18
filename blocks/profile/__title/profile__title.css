@@ -1,18 +1,17 @@
 .profile__title {
-  margin: 0;
   font-weight: 500;
   font-size: 27px;
   line-height: 33px;
-  transition: .3s;
+  transition: 0.3s;
+  margin-top: 0;
+  margin-bottom: 0;
   margin-right: 10px;
 }
 
-@media screen and (min-width: 450px) {
+@media (min-width: 900px) {
   .profile__title {
     font-size: 42px;
-    line-height: 1.14;
-    margin-left: 30px;
+    line-height: 48px;
     margin-right: 18px;
   }
-  
 }

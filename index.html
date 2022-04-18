@@ -17,20 +17,24 @@
 
     <main class="main">
       <section class="profile">
-        <img
-          src="./images/Avatar.jpg"
-          alt="Аватар пользователя"
-          class="profile__image"
-        />
         <div class="profile__container">
-          <h1 class="profile__title">Жак-Ив Кусто</h1>
-          <button
-            class="profile__btn-edit"
-            type="button"
-            name="edit-profile"
-            id="edit-profile"
-          ></button>
-          <p class="profile__subtitle">Исследователь океана</p>
+          <img
+            src="./images/Avatar.jpg"
+            alt="Аватар пользователя"
+            class="profile__image"
+          />
+          <div class="profile__info">
+            <div class="profile__title-group">
+              <h1 class="profile__title">Жак-Ив Кусто</h1>
+              <button
+                class="profile__btn-edit"
+                type="button"
+                name="edit-profile"
+                id="edit-profile"
+              ></button>
+            </div>
+            <p class="profile__subtitle">Исследователь океана</p>
+          </div>
         </div>
         <button class="profile__btn-add" type="button"></button>
       </section>
@@ -160,7 +164,10 @@
               required
               name="form-about"
             />
-            <button class="popup__button popup__button_save_submit" type="submit">
+            <button
+              class="popup__button popup__button_save_submit"
+              type="submit"
+            >
               Сохранить
             </button>
             <button
