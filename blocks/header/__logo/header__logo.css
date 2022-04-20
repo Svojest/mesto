@@ -1,6 +1,7 @@
 .header__logo {
     margin-left: 27px;
     transition: .3s;
+    
 }
 
 .header__logo:hover {
@@ -10,5 +11,7 @@
 @media screen and (min-width: 900px) {
     .header__logo {
         margin-left: 0;
+        width: 142px;
+        height: 33px;
     }
 }

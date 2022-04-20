@@ -5,11 +5,13 @@
   justify-content: start;
   text-align: start;
   transition: .3s;
+  margin: 48px auto 36px;
+  height: 14px;
 }
 
 @media screen and (min-width: 620px) {
   .footer {
-    max-width: 880px;
+    max-width: 880px; 
     width: 582px;
   }
 }
@@ -17,5 +19,7 @@
 @media screen and (min-width: 900px) {
   .footer {
     width: 100%;
+    margin: 66px auto 60px;
+    height: 18px;
   }
 }

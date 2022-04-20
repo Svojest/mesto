@@ -10,8 +10,8 @@
 
   <body class="page">
     <header class="header">
-      <a href="#" class="header__logo"
-        ><img src="./images/logo.svg" alt="Логотип Место"
+      <a href="#"
+        ><img src="./images/logo.svg" alt="Логотип Место" class="header__logo"
       /></a>
     </header>
 
@@ -31,12 +31,13 @@
                 type="button"
                 name="edit-profile"
                 id="edit-profile"
+                aria-label="edit"
               ></button>
             </div>
             <p class="profile__subtitle">Исследователь океана</p>
           </div>
         </div>
-        <button class="profile__btn-add" type="button"></button>
+        <button class="profile__btn-add" type="button" aria-label="add"></button>
       </section>
 
       <section class="gallary">
@@ -167,12 +168,14 @@
             <button
               class="popup__button popup__button_save_submit"
               type="submit"
+              aria-label="submit"
             >
               Сохранить
             </button>
             <button
               class="popup__button popup__button_close_reset"
               type="reset"
+              aria-label="reset"
             ></button>
           </fieldset>
         </form>

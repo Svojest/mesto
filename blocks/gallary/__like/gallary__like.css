@@ -1,7 +1,7 @@
 .gallary__like {
-
+  cursor: pointer;
 }
 
 .gallary__like:hover {
-  opacity: 50%;
+  opacity: 60%;
 }

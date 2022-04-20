@@ -3,7 +3,6 @@
   font-size: 14px;
   line-height: 17px;
   color: rgba(84, 84, 84, 1);
-  margin: 48px auto 36px;
 }
 
 @media (min-width: 900px) {
@@ -12,3 +11,4 @@
     line-height: 22px;
   }
 }
+

@@ -6,10 +6,18 @@
   border-bottom: solid 1px #8383836e;
   outline: 0;
   height: 27px;
-  padding-bottom: 13px;
-  margin-bottom: 30px;
+  padding: 0 0 3px 0;
+  margin-bottom: 25px;
+
 }
 
 .popup__input:focus {
   outline: 3px solid rgba(21, 150, 209, 0.76);
+}
+
+@media (min-width: 620px) { 
+  .popup__input {
+    margin-bottom: 33px;
+  }
+  
 }
