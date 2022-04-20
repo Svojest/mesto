@@ -1,4 +1,4 @@
-.popup__button_close_reset {
+.popup__button_close_modal {
   background-image: url(../../../../images/Close\ Icon\ \(1\).svg);
   background-size: contain;
   background-color: rgba(0, 0 , 0, 0);
@@ -11,14 +11,14 @@
   right: 0;
 }
 
-.popup__button_close_reset:hover {
+.popup__button_close_modal:hover {
   cursor: pointer;
   opacity: 60%;
   transition: .3s;
 }
 
 @media screen and (min-width: 620px) {
-  .popup__button_close_reset {
+  .popup__button_close_modal {
     width: 32px;
     height: 32px;
     top: -40px;
