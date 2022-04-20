@@ -9,14 +9,16 @@
   margin: 0;
   padding: 0;
   cursor: pointer;
+  transition: .3s;
 }
 
 .profile__btn-add:hover {
   opacity: 60%;
 }
 
-@media screen and (min-width: 900px) {
+@media (min-width: 900px) {
   .profile__btn-add {
     background-image: url("../../../images/Add\ Button\ desktop.svg");
     width: 150px;
+}
 }
