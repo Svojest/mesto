@@ -3,8 +3,8 @@ let formElement = document.querySelector(".popup__form"); // Воспользу�
 
 let nameProfile = document.querySelector(".profile__title"); // Воспользуйтесь инструментом .querySelector()
 let jobProfile = document.querySelector(".profile__subtitle"); // Воспользуйтесь инструментом .querySelector()
-let nameInput = document.querySelector(".popup__input_text-name"); // Воспользуйтесь инструментом .querySelector()
-let jobInput = document.querySelector(".popup__input_text-about"); // Воспользуйтесь инструментом .querySelector()
+let nameInput = document.querySelector(".popup__input_type_name"); // Воспользуйтесь инструментом .querySelector()
+let jobInput = document.querySelector(".popup__input_type_about"); // Воспользуйтесь инструментом .querySelector()
 // Отображение по умолчанию
 
 
