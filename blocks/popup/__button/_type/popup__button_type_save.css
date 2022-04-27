@@ -1,4 +1,4 @@
-.popup__button_save_modal {
+.popup__button_type_save {
   background-color: #000;
   color: #fff;
   border: 0;
@@ -10,14 +10,14 @@
   margin-top: 15px;
 }
 
-.popup__button_save_modal:hover {
+.popup__button_type_save:hover {
   cursor: pointer;
   opacity: 80%;
   transition: 0.3s;
 }
 
 @media screen and (min-width: 900px) {
-  .popup__button_save_modal {
+  .popup__button_type_save {
     height: 50px;
     font-size: 18px;
     line-height: 22px;

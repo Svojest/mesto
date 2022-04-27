@@ -1,6 +1,6 @@
 const editProfileBtn = document.querySelector(".profile__btn-edit");
 const modalWindow = document.querySelector(".popup");
-const editCloseBtn = document.querySelector(".popup__button_close_modal");
+const editCloseBtn = document.querySelector(".popup__button_type_close");
 
 // Открытие popup
 function addEditProfile() {
