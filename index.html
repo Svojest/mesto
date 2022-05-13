@@ -43,104 +43,29 @@
           aria-label="add"
         ></button>
       </section>
-
-      <section class="gallary">
-        <article class="gallary__item">
-          <img
-            src="./images/kirill-pershin-1088404-unsplash.jpg"
-            alt="Карачеевск"
-            class="gallary__image"
-          />
-          <div class="gallary__info">
-            <h2 class="gallary__title">Карачаевск</h2>
-            <button
-              aria-label="Нравится"
-              class="gallary__like gallary__like_active"
-              type="button"
-            ></button>
-          </div>
-        </article>
-        <article class="gallary__item">
-          <img
-            src="./images/kirill-pershin-1556355-unsplash.png"
-            alt="Гора Эльбрус"
-            class="gallary__image"
-          />
-          <div class="gallary__info">
-            <h2 class="gallary__title">Гора Эльбрус</h2>
-            <button
-              aria-label="Нравится"
-              class="gallary__like gallary__like_active"
-              type="button"
-            ></button>
-          </div>
-        </article>
-        <article class="gallary__item">
-          <img
-            src="./images/kirill-pershin-1404681-unsplash.png"
-            alt="Домбай"
-            class="gallary__image"
-          />
-          <div class="gallary__info">
-            <h2 class="gallary__title">Домбай</h2>
-            <button
-              aria-label="Нравится"
-              class="gallary__like gallary__like_active"
-              type="button"
-            ></button>
-          </div>
-        </article>
-        <article class="gallary__item">
-          <img
-            src="./images/kirill-pershin-1088404-unsplash.jpg"
-            alt="Карачеевск"
-            class="gallary__image"
-          />
-          <div class="gallary__info">
-            <h2 class="gallary__title">Гора Эльбрус</h2>
-            <button
-              aria-label="Нравится"
-              class="gallary__like gallary__like_active"
-              type="button"
-            ></button>
-          </div>
-        </article>
-        <article class="gallary__item">
-          <img
-            src="./images/kirill-pershin-1088404-unsplash.jpg"
-            alt="Карачеевск"
-            class="gallary__image"
-          />
-          <div class="gallary__info">
-            <h2 class="gallary__title">Карачаевск</h2>
-            <button
-              aria-label="Нравится"
-              class="gallary__like gallary__like_active"
-              type="button"
-            ></button>
-          </div>
-        </article>
-        <article class="gallary__item">
-          <img
-            src="./images/kirill-pershin-1556355-unsplash.png"
-            alt="Карачеевск"
-            class="gallary__image"
-          />
-          <div class="gallary__info">
-            <h2 class="gallary__title">Карачаевск</h2>
-            <button
-              aria-label="Нравится"
-              class="gallary__like gallary__like_active"
-              type="button"
-            ></button>
-          </div>
-        </article>
-      </section>
     </main>
+
+    <section class="gallary">
+      <ul class="gallary__item"></ul>
+    </section>
 
     <footer class="footer">
       <p class="footer__copyright">© 2022 Mesto Russia</p>
     </footer>
+
+    <template id="cards">
+      <li class="card">
+        <img src="#" alt="Шаблон" class="card__image" />
+        <div class="card__info">
+          <h2 class="card__title"></h2>
+          <button
+            aria-label="Нравится"
+            class="card__like card__like_active"
+            type="button"
+          ></button>
+        </div>
+      </li>
+    </template>
 
     <div class="popup">
       <div class="popup__container">
@@ -181,5 +106,6 @@
     </div>
     <script src="./scripts/index.js"></script>
     <script src="./scripts/form.js"></script>
+    <script src="./scripts/initialCards.js"></script>
   </body>
 </html>

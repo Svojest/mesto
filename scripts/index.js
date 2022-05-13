@@ -14,3 +14,4 @@ function removeEditProfile() {
 
 editProfileBtn.addEventListener("click", addEditProfile);
 editCloseBtn.addEventListener("click", removeEditProfile);
+

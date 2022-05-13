@@ -15,11 +15,12 @@
 @import url(../blocks/profile/__title-group/profile__title-group.css);
 @import url(../blocks/gallary/gallary.css);
 @import url(../blocks/gallary/__item/gallary__item.css);
-@import url(../blocks/gallary/__image/gallary__image.css);
-@import url(../blocks/gallary/__info/gallary__info.css);
-@import url(../blocks/gallary/__title/gallary__title.css);
-@import url(../blocks/gallary/__like/gallary__like.css);
-@import url(../blocks/gallary/__like/_active/gallary__like_active.css);
+@import url(../blocks/card/card.css);
+@import url(../blocks/card/__image/card__image.css);
+@import url(../blocks/card/__info/card__info.css);
+@import url(../blocks/card/__like/card__like.css);
+@import url(../blocks/card/__like/_active/card__like_active.css);
+@import url(../blocks/card/__title/card__title.css);
 @import url(../blocks/footer/footer.css);
 @import url(../blocks/footer/__copyright/footer__copyright.css);
 @import url(../blocks/popup/popup.css);
