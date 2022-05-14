@@ -55,24 +55,20 @@
 
     <template id="cards">
       <li class="card">
-        <button
-          aria-label="Удалить"
-          class="card__bin"
-          type="button"
-        ></button>
+        <button aria-label="Удалить" class="card__bin" type="button"></button>
         <img src="#" alt="Шаблон" class="card__image" />
         <div class="card__info">
           <h2 class="card__title"></h2>
           <button
             aria-label="Нравится"
-            class="card__like card__like_active"
+            class="card__like"
             type="button"
           ></button>
         </div>
       </li>
     </template>
 
-    <div class="popup">
+    <div class="popup popup_edit-profile">
       <div class="popup__container">
         <form class="popup__form" name="form-edit">
           <h2 class="popup__title">Редактировать профиль</h2>
@@ -96,9 +92,47 @@
             <button
               class="popup__button popup__button_type_save"
               type="submit"
-              aria-label="submit"
+              aria-label="Сохранить"
             >
               Сохранить
+            </button>
+            <button
+              class="popup__button popup__button_type_close"
+              type="reset"
+              aria-label="reset"
+            ></button>
+          </fieldset>
+        </form>
+      </div>
+    </div>
+
+    <div class="popup popup_add-card">
+      <div class="popup__container">
+        <form class="popup__form" name="form-add">
+          <h2 class="popup__title">Новое место</h2>
+          <fieldset class="popup__input-container">
+            <input
+              type="text"
+              class="popup__input popup__input_type_card-title"
+              id="cardTitle"
+              placeholder="Название"
+              required
+              name="card-name"
+            />
+            <input
+              type="text"
+              class="popup__input popup__input_type_card-url"
+              id="subtitle"
+              placeholder="Ссылка на картинку"
+              required
+              name="card-url"
+            />
+            <button
+              class="popup__button popup__button_type_add"
+              type="submit"
+              aria-label="Создать"
+            >
+              Создать
             </button>
             <button
               class="popup__button popup__button_type_close"

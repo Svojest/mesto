@@ -51,15 +51,23 @@ const cardContainer = (srcCard, titleCard) => {
   const cardNew = cardsTemplate.querySelector(".card").cloneNode(true);
   const imageCard = cardNew.querySelector(".card__image");
   const buttonLike = cardNew.querySelector(".card__like");
-  const buttonBin = cardNew.querySelector('.card_bin');
+  const buttonBin = cardNew.querySelector(".card__bin");
 
   imageCard.setAttribute("src", srcCard);
   imageCard.setAttribute("alt", titleCard);
   cardNew.querySelector(".card__title").textContent = titleCard;
+
+  buttonLike.addEventListener("click", function () {
+    buttonLike.classList.toggle("card__like_active");
+  });
+
+  buttonBin.addEventListener("click", function () {
+    buttonBin.closest(".card").remove();
+  });
   return cardNew;
 };
 
 initialCards.forEach(({ name, link }) => {
-  const el = cardContainer(link, name);
-  cardGallary.append(el)
+  const loadCards = cardContainer(link, name);
+  cardGallary.append(loadCards);
 });
