@@ -53,21 +53,6 @@
       <p class="footer__copyright">© 2022 Mesto Russia</p>
     </footer>
 
-    <template id="cards">
-      <li class="card">
-        <button aria-label="Удалить" class="card__bin" type="button"></button>
-        <img src="#" alt="Шаблон" class="card__image" />
-        <div class="card__info">
-          <h2 class="card__title"></h2>
-          <button
-            aria-label="Нравится"
-            class="card__like"
-            type="button"
-          ></button>
-        </div>
-      </li>
-    </template>
-
     <div class="popup popup_edit-profile">
       <div class="popup__container">
         <form class="popup__form popup__form-edit" name="form-edit">
@@ -121,7 +106,7 @@
               name="card-name"
             />
             <input
-              type="text"
+              type="url"
               class="popup__input popup__input_type_card-url"
               id="subtitle"
               placeholder="Ссылка на картинку"
@@ -129,7 +114,7 @@
               name="card-url"
             />
             <button
-              class="popup__button popup__button_type_add"
+              class="popup__button popup__button_type_save popup__button_type_add"
               type="submit"
               aria-label="Создать"
             >
@@ -145,6 +130,34 @@
         </form>
       </div>
     </div>
+
+    <div class="popup popup_image_open">
+      <div class="popup__container_image">
+        <img src="#" alt="#" class="popup__image" />
+        <h2 class="popup__name-image">222</h2>
+        <button
+          id="close-popupImage"
+          class="popup__button popup__button_type_close"
+          type="reset"
+          aria-label="reset"
+        ></button>
+      </div>
+    </div>
+
+    <template id="cards">
+      <li class="card">
+        <button aria-label="Удалить" class="card__bin" type="button"></button>
+        <img src="#" alt="Шаблон" class="card__image" />
+        <div class="card__info">
+          <h2 class="card__title"></h2>
+          <button
+            aria-label="Нравится"
+            class="card__like"
+            type="button"
+          ></button>
+        </div>
+      </li>
+    </template>
     <script src="./scripts/index.js"></script>
   </body>
 </html>
