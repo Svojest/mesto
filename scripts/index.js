@@ -38,8 +38,8 @@ function closePopup(popup) {
 
 //Открытие Popup и слушатель
 function displayEditPopup() {
-  inputTitleProfile.setAttribute("value", profileTitle.textContent);
-  inputAboutProfile.setAttribute("value", profileSubtitle.textContent);
+  inputTitleProfile.value = profileTitle.textContent;
+  inputAboutProfile.value = profileSubtitle.textContent;
   displayPopup(popupEditProfile);
 }
 btnEditProfile.addEventListener("click", displayEditPopup);
@@ -51,11 +51,6 @@ function submitEditPopup(evt) {
   profileSubtitle.textContent = inputAboutProfile.value;
   closePopup(popupEditProfile);
 }
-profileEditForm.addEventListener("submit", submitEditPopup);
-
-btnCloseProfile.addEventListener("click", function () {
-  closePopup(popupEditProfile);
-});
 
 const initialCards = [
   {
@@ -84,7 +79,8 @@ const initialCards = [
   },
 ];
 
-const cardContainer = (srcCard, titleCard) => {
+
+const handleCardContainer = (srcCard, titleCard) => {
   const cardNew = templateCard.querySelector(".card").cloneNode(true);
   const imageCard = cardNew.querySelector(".card__image");
   const buttonLike = cardNew.querySelector(".card__like");
@@ -103,40 +99,52 @@ const cardContainer = (srcCard, titleCard) => {
   });
 
   imageCard.addEventListener("click", function () {
+    srcImage.setAttribute("src", srcCard);
+    srcImage.setAttribute("alt", titleCard);
+    nameImage.textContent = titleCard;
     displayPopup(popupOpenImage);
-    srcImage.setAttribute("src", imageCard.getAttribute("src"));
-    srcImage.setAttribute("alt", imageCard.getAttribute("alt"));
-    nameImage.textContent = imageCard.getAttribute("alt");
+    console.log(titleCard);
   });
   return cardNew;
 };
 
-btnCloseImage.addEventListener("click", function () {
-  closePopup(popupOpenImage);
-});
-
 // отображение карточек на страницу
 initialCards.forEach(({ name, link }) => {
-  const loadCards = cardContainer(link, name);
+  const loadCards = handleCardContainer(link, name);
   locationCard.append(loadCards);
+});
+
+
+// содержимое формы создания карточки
+const addCardForm = (evt) => {
+  evt.preventDefault();
+  locationCard.prepend(
+    handleCardContainer(inputUrlCard.value, inputTitleCard.value)
+  );
+  inputUrlCard.value = "";
+  inputTitleCard.value = "";
+  closePopup(popupAddCard);
+};
+
+
+profileEditForm.addEventListener("submit", submitEditPopup);
+
+btnCloseProfile.addEventListener("click", function () {
+  closePopup(popupEditProfile);
 });
 
 // открытие формы создания карточки
 btnAddCard.addEventListener("click", function () {
   displayPopup(popupAddCard);
 });
-// содержимое формы создания карточки
-const addCardForm = (evt) => {
-  evt.preventDefault();
-  locationCard.prepend(cardContainer(inputUrlCard.value, inputTitleCard.value));
-  inputUrlCard.value = "";
-  inputTitleCard.value = "";
-  closePopup(popupAddCard);
-};
 
 // сохранине формы создания карточки
 cardAddForm.addEventListener("submit", addCardForm);
 // закрытие через крестик
 btnCloseCard.addEventListener("click", function () {
   closePopup(popupAddCard);
+});
+
+btnCloseImage.addEventListener("click", function () {
+  closePopup(popupOpenImage);
 });

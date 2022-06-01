@@ -55,7 +55,7 @@
 
     <div class="popup popup_edit-profile">
       <div class="popup__container">
-        <form class="popup__form popup__form-edit" name="form-edit">
+        <form class="popup__form popup__form-edit" name="form-edit" novalidate>
           <h2 class="popup__title">Редактировать профиль</h2>
           <fieldset class="popup__input-container">
             <input
@@ -63,17 +63,23 @@
               class="popup__input popup__input_type_name"
               id="title"
               placeholder="Имя"
-              required
               name="form-name"
+              minlength="2"
+              maxlength="40"
+              required
             />
+            <span id="form-name-error" class="popup__input_error"></span>
             <input
               type="text"
               class="popup__input popup__input_type_about"
               id="subtitle"
               placeholder="О себе"
-              required
               name="form-about"
+              minlength="2"
+              maxlength="200"
+              required
             />
+            <span id="form-about-error" class="popup__input_error"></span>
             <button
               class="popup__button popup__button_type_save"
               type="submit"
@@ -94,7 +100,7 @@
 
     <div class="popup popup_add-card">
       <div class="popup__container">
-        <form class="popup__form popup__form-card" name="form-add">
+        <form class="popup__form popup__form-card" name="form-add" novalidate>
           <h2 class="popup__title">Новое место</h2>
           <fieldset class="popup__input-container">
             <input
@@ -105,6 +111,7 @@
               required
               name="card-name"
             />
+            <span id="card-name-error" class="popup__input_error"></span>
             <input
               type="url"
               class="popup__input popup__input_type_card-url"
@@ -113,6 +120,7 @@
               required
               name="card-url"
             />
+            <span id="card-url-error" class="popup__input_error"></span>
             <button
               class="popup__button popup__button_type_save popup__button_type_add"
               type="submit"
@@ -159,5 +167,6 @@
       </li>
     </template>
     <script src="./scripts/index.js"></script>
+    <script src="./scripts/validate.js"></script>
   </body>
 </html>

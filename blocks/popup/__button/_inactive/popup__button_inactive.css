@@ -1,0 +1,5 @@
+.popup__button_inactive {
+  background-image: url(../../../../images/disablebutton.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
