@@ -35,6 +35,18 @@ function displayPopup(popup) {
 function closePopup(popup) {
   popup.classList.remove("popup_opened");
 }
+//Закрытие popup по оверлею мышкой
+function closeClickOverlay(evt) {
+  if (evt.target === evt.currentTarget) {
+    closePopup(evt.currentTarget);
+  }
+}
+//Закрытие popup на нажатие Esc
+function closePressEscape(evt) {
+  if (evt.key === "Escape") {
+    closePopup(document.querySelector(".popup_opened"));
+  }
+}
 
 //Открытие Popup и слушатель
 function displayEditPopup() {
@@ -79,7 +91,6 @@ const initialCards = [
   },
 ];
 
-
 const handleCardContainer = (srcCard, titleCard) => {
   const cardNew = templateCard.querySelector(".card").cloneNode(true);
   const imageCard = cardNew.querySelector(".card__image");
@@ -114,7 +125,6 @@ initialCards.forEach(({ name, link }) => {
   locationCard.append(loadCards);
 });
 
-
 // содержимое формы создания карточки
 const addCardForm = (evt) => {
   evt.preventDefault();
@@ -125,7 +135,6 @@ const addCardForm = (evt) => {
   inputTitleCard.value = "";
   closePopup(popupAddCard);
 };
-
 
 profileEditForm.addEventListener("submit", submitEditPopup);
 
@@ -149,7 +158,7 @@ btnCloseImage.addEventListener("click", function () {
   closePopup(popupOpenImage);
 });
 
-
-
-
-
+popupEditProfile.addEventListener("mousedown", closeClickOverlay);
+popupAddCard.addEventListener("mousedown", closeClickOverlay);
+popupOpenImage.addEventListener("mousedown", closeClickOverlay);
+document.addEventListener("keydown", closePressEscape);
