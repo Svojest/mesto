@@ -148,3 +148,8 @@ btnCloseCard.addEventListener("click", function () {
 btnCloseImage.addEventListener("click", function () {
   closePopup(popupOpenImage);
 });
+
+
+
+
+
