@@ -1,5 +1,5 @@
 // Констатнты для нажатия фото у карточки
-import { popupOpenImage, srcImage, nameImage } from './index.js';
+import { popupOpenImage, srcImage, nameImage } from '../utils/constants.js';
 import { displayPopup } from '../utils/utils.js';
 
 export default class Card {

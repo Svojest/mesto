@@ -1,19 +1,19 @@
 export default class FormValidation {
-  constructor(selector, formElement) {
-    this._selector = selector;
+  constructor(validationConfig, formElement) {
+    this._validationConfig = validationConfig;
     this._formElement = formElement;
-    this._inputs = Array.from(this._formElement.querySelectorAll(selector.inputSelector));
-    this._buttonElement = this._formElement.querySelector(selector.submitButton);
+    this._inputs = Array.from(this._formElement.querySelectorAll(validationConfig.inputSelector));
+    this._buttonElement = this._formElement.querySelector(validationConfig.submitButton);
   }
   // Показ ошибки и скрытие
   _showError(inputElement, errorMessage) {
     const errorElement = this._formElement.querySelector(`.${inputElement.id}-error`);
     errorElement.textContent = errorMessage;
-    errorElement.classList.add(this._selector.errorText);
+    errorElement.classList.add(this._validationConfig.errorText);
   }
   _hideError(inputElement) {
     const errorElement = this._formElement.querySelector(`.${inputElement.id}-error`);
-    errorElement.classList.remove(this._selector.errorText);
+    errorElement.classList.remove(this._validationConfig.errorText);
     errorElement.textContent = '';
   }
   // Проверка на валидность
@@ -32,7 +32,7 @@ export default class FormValidation {
   }
   // Добавление кнопке класс с неактивной кнопкой
   _disableButton() {
-    this._buttonElement.classList.add(this._selector.inactiveButton);
+    this._buttonElement.classList.add(this._validationConfig.inactiveButton);
     this._buttonElement.disabled = true;
   }
   // Сброс ошибки и отключение кнопки
@@ -47,7 +47,7 @@ export default class FormValidation {
     if (this._hasInvalidInput(this._inputs)) {
       this._disableButton();
     } else {
-      this._buttonElement.classList.remove(this._selector.inactiveButton);
+      this._buttonElement.classList.remove(this._validationConfig.inactiveButton);
       this._buttonElement.disabled = false;
     }
   }

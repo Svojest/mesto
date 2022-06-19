@@ -2,6 +2,7 @@ import { initialCards } from './presetsCard.js';
 import Card from './Card.js';
 import FormValidation from './FormValidator.js';
 import { displayPopup, closePopup, closeClickOverlay } from '../utils/utils.js';
+import { popupOpenImage, settingSelectors } from '../utils/constants.js';
 
 // Кнопки для открытия popup
 const btnEditProfile = document.querySelector('.profile__btn-edit');
@@ -26,19 +27,8 @@ const locationCard = document.querySelector('.gallary__item');
 const popupAddCard = document.querySelector('.popup_add-card');
 const inputTitleCard = document.querySelector('.popup__input_type_card-title');
 const inputUrlCard = document.querySelector('.popup__input_type_card-url');
-// Содержимое формы изоображения
-export const popupOpenImage = document.querySelector('.popup_image_open');
-export const srcImage = document.querySelector('.popup__image');
-export const nameImage = document.querySelector('.popup__name-image');
 
-const settingSelectors = {
-  formSelector: '.popup__form',
-  inputSelector: '.popup__input',
-  submitButton: '.popup__button_type_save',
-  inactiveButton: 'popup__button_inactive',
-  inputErrorSelector: '.popup__input-error',
-  errorText: 'popup__input-error_active',
-};
+
 // Отображение валидации у форм
 const forms = Array.from(document.querySelectorAll(settingSelectors.formSelector));
 forms.forEach((formElement) => {
@@ -49,6 +39,7 @@ forms.forEach((formElement) => {
     Validation._resetValidation();
   });
 });
+
 // ОТКРЫТИЕ popup EditProfile
 function displayEditPopup() {
   inputTitleProfile.value = profileTitle.textContent;
