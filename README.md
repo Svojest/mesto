@@ -14,4 +14,4 @@
 **Картинки**
 
 **Технологии**
-* [HTML, CSS, JavaScript, DOM, Git, Адаптивная вёрстка]
+* [HTML, CSS, JavaScript, DOM, Git, Адаптивная вёрстка, ООП]
