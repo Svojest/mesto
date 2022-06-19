@@ -20,8 +20,10 @@ export default class FormValidation {
   _isValid(inputElement) {
     if (!inputElement.validity.valid) {
       this._showError(inputElement, inputElement.validationMessage);
+      inputElement.classList.add('popup__input_invalid');
     } else {
       this._hideError(inputElement);
+      inputElement.classList.remove('popup__input_invalid');
     }
   }
   // Валидность нескольких полей

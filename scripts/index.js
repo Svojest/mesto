@@ -40,6 +40,7 @@ forms.forEach((formElement) => {
   });
 });
 
+
 // ОТКРЫТИЕ popup EditProfile
 function displayEditPopup() {
   inputTitleProfile.value = profileTitle.textContent;
