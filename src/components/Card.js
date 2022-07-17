@@ -1,12 +1,10 @@
-// Констатнты для нажатия фото у карточки
-import { popupOpenImage, srcImage, nameImage } from '../utils/constants.js';
-import { displayPopup } from '../utils/utils.js';
 
 export default class Card {
-  constructor(name, link, cardSelector) {
+  constructor(name, link, cardSelector, handleCardClick) {
     this._name = name;
     this._link = link;
     this._cardSelector = cardSelector;
+    this._handleCardClick = handleCardClick;
   }
 
   // ПОЛУЧЕНИЕ РАЗМЕТКИ
@@ -28,13 +26,6 @@ export default class Card {
   _handleClickLike() {
     this._buttonLike.classList.toggle('card__like_active');
   }
-  //Нажатие на фото карточки
-  _handleClickImage() {
-    nameImage.textContent = this._name;
-    srcImage.src = this._link;
-    srcImage.alt = this._name;
-    displayPopup(popupOpenImage);
-  }
 
   // СЛУШАТЕЛИ
   _setEventListeners() {
@@ -45,7 +36,7 @@ export default class Card {
       this._handleClickLike();
     });
     this._cardImage.addEventListener('click', () => {
-      this._handleClickImage();
+      this._handleCardClick(this._name, this._link);
     });
   }
 
