@@ -41,23 +41,22 @@ function displayImagePopup(srcImage, nameImage) {
 }
 
 // СОХРАНЕНИЕ изменений при нажатии submit в Edit Form
-function submitEditPopup(evt) {
+function submitEditPopup(evt, data) {
   evt.preventDefault();
   // Подставление новых данных на страницу
-  userInfo.setUserInfo(inputTitleProfile, inputAboutProfile);
-
+  userInfo.setUserInfo(data['form-name'], data['form-about']);
+  console.log(data);
   popupEditForm.close();
 }
 
 // Добавление карточки при нажатии submit в Add Form
-function submitAddPopup(evt) {
+function submitAddPopup(evt, data) {
   evt.preventDefault();
-  locationCard.prepend(
-    createCard({
-      name: inputTitleCard.value,
-      link: inputUrlCard.value,
-    })
-  );
+  const cardElement = createCard({
+    name: data['card-name'],
+    link: data['card-url'],
+  });
+  cardList.prependItem(cardElement)
 
   popupAddForm.close();
 }
@@ -98,7 +97,7 @@ forms.forEach((formElement) => {
   Validation.enableValidation();
   formElement.addEventListener('submit', (evt) => {
     evt.preventDefault();
-    Validation._resetValidation();
+    Validation.resetValidation();
   });
 });
 

@@ -38,7 +38,7 @@ export default class FormValidation {
     this._buttonElement.disabled = true;
   }
   // Сброс ошибки и отключение кнопки
-  _resetValidation() {
+  resetValidation() {
     this._inputs.forEach((inputElement) => {
       this._hideError(inputElement);
     });
