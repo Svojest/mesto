@@ -1,4 +1,4 @@
-.gallary__item {
+.gallery__item {
   margin: 0 auto;
   padding: 0;
   display: grid;
@@ -10,13 +10,13 @@
 }
 
 @media screen and (min-width: 620px) {
-  .gallary__item {
+  .gallery__item {
     grid-template-columns: repeat(2, 282px);
   }
 }
 
 @media screen and (min-width: 900px) {
-  .gallary__item {
+  .gallery__item {
     grid-template-columns: repeat(3, 282px);
   }
 }

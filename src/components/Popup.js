@@ -16,6 +16,13 @@ export default class Popup {
       this.close();
     } 
   }
+
+  load(text) {
+    this._buttonSubmit = this._popupForm.querySelector('.popup__button')
+    this._defaultText = this._buttonSubmit.textContent;
+    this._buttonSubmit.textContent = text;
+  }
+  
   setEvenetListeners() {
     this._popup.addEventListener('mousedown', (evt) => {
       // Закрытие на клик крестика

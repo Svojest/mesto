@@ -1,4 +1,12 @@
-export { settingSelectors, popupElement };
+export {
+  settingSelectors,
+  popupElement,
+  btnEditProfile,
+  btnAddCard,
+  btnUpdateAvatar,
+  inputAboutProfile,
+  inputTitleProfile,
+};
 
 const settingSelectors = {
   formSelector: '.popup__form',
@@ -8,4 +16,12 @@ const settingSelectors = {
   inputErrorSelector: '.popup__input-error',
   errorText: 'popup__input-error_active',
 };
-const popupElement = document.querySelector('.popup')
+const popupElement = document.querySelector('.popup');
+
+// Кнопки для открытия popup
+const btnEditProfile = document.querySelector('.profile__btn-edit');
+const btnAddCard = document.querySelector('.profile__btn-add');
+const btnUpdateAvatar = document.querySelector('.profile__btn-avatar');
+// Содержимое Edit
+const inputTitleProfile = document.querySelector('.popup__input_type_name');
+const inputAboutProfile = document.querySelector('.popup__input_type_about');
