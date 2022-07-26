@@ -17,11 +17,6 @@ export default class Popup {
     } 
   }
 
-  load(text) {
-    this._buttonSubmit = this._popupForm.querySelector('.popup__button')
-    this._defaultText = this._buttonSubmit.textContent;
-    this._buttonSubmit.textContent = text;
-  }
   
   setEvenetListeners() {
     this._popup.addEventListener('mousedown', (evt) => {

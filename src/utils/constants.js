@@ -1,6 +1,5 @@
 export {
   settingSelectors,
-  popupElement,
   btnEditProfile,
   btnAddCard,
   btnUpdateAvatar,
@@ -15,8 +14,9 @@ const settingSelectors = {
   inactiveButton: 'popup__button_inactive',
   inputErrorSelector: '.popup__input-error',
   errorText: 'popup__input-error_active',
+  inputInvalid: 'popup__input_invalid',
 };
-const popupElement = document.querySelector('.popup');
+
 
 // Кнопки для открытия popup
 const btnEditProfile = document.querySelector('.profile__btn-edit');

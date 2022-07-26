@@ -20,10 +20,10 @@ export default class FormValidation {
   _isValid(inputElement) {
     if (!inputElement.validity.valid) {
       this._showError(inputElement, inputElement.validationMessage);
-      inputElement.classList.add('popup__input_invalid');
+      inputElement.classList.add(this._validationConfig.inputInvalid);
     } else {
       this._hideError(inputElement);
-      inputElement.classList.remove('popup__input_invalid');
+      inputElement.classList.remove(this._validationConfig.inputInvalid);
     }
   }
   // Валидность нескольких полей
@@ -61,6 +61,9 @@ export default class FormValidation {
         this._isValid(inputElement);
         this._toggleButton();
       });
+    });
+    this._formElement.addEventListener('reset', () => {
+      this.resetValidation();
     });
   }
   // Вкл валидации
